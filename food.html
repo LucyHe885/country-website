@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food</title>
     <meta name="description" content="This is an example of a meta description.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/food.css">
     <script src="scripts/index.js" defer></script>
 </head>
 <body>
@@ -97,14 +102,19 @@
 
     </header>  
     <main>
-        <header>
+        <header class="subpages-header">
             <h1>Food</h1>
+            <img class="subpages-header-img" src="images/mountain.jpeg" alt="mountain">
         </header>
         <section>
-            <h2></h2>
-            <article>
-
-            </article>
+            <div class="container">
+                <section class="slide" id="slide1">Section 1</section>
+                <section class="slide" id="slide2">Section 2</section>
+                <section class="slide" id="slide3">Section 3</section>
+            </div>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+            
         </section>
     </main>
     <footer>

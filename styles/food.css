@@ -1,0 +1,26 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300vw; /* 如果有三个 section */
+}
+
+.slide {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    background: #333;
+}
+
+/* 可以为每个 section 设置不同的背景色 */
+#slide1 { background-color: #FF5733; }
+#slide2 { background-color: #33A1FF; }
+#slide3 { background-color: #33FF57; }
