@@ -1,0 +1,383 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.5rem;
+	margin: 2rem;
+}
+
+p {
+	margin: 1rem 1rem 2rem;
+}
+
+
+/* Elements
+--------------------------------------------- */
+ul {
+	
+}
+
+ol {
+	
+}
+
+dl {
+	
+}
+
+figure {
+	
+}
+
+table {
+	
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	text-decoration: none;
+    color: #ebebeb;
+    padding:.3rem .5rem;
+}
+
+#site-nav-list a:hover {
+	text-decoration: underline;
+}
+
+/* a:hover .site-logo path,
+a:focus .site-logo path {
+    fill: #191919; 
+} */
+
+article a {
+    list-style-type: none;
+    color: aliceblue;
+}
+
+.button a{
+    color: #000;
+}
+.button a:active,
+.button a:hover,
+.button a:focus {
+    list-style-type: none;
+    color: rgb(240, 240, 240);
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-link {
+    padding: .5rem;
+    color: rgb(210, 210, 210);
+}
+
+footer a:active,
+footer a:hover{
+    list-style-type: none;
+    text-decoration: underline;
+}
+
+@media(min-width:50em) {
+    a {
+        color: black;
+    }
+}
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+header {
+    padding: .5rem;
+    border-bottom: solid;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #f0f0f0; */
+}
+
+.site-logo-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.site-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+.site-nav ul{
+    list-style-type: none;
+    margin-top: 3rem;
+    margin-left: .4rem;
+    padding: 0;
+
+}
+.site-nav li {
+    background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(.1rem);
+    padding-top: .4rem;
+    
+}
+
+#site-nav-button {
+    display: block;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#site-nav-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+    
+    
+}
+
+#site-nav-list.toggled {
+    display: flex;
+    
+}
+
+
+
+
+
+@media (min-width: 50em) {
+    .site-logo {
+        width: 5rem;
+        height: auto;
+    }
+
+    #site-nav-button {
+        display: none;
+    }
+    .site-logo-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #site-nav-list {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        z-index: auto;
+        transition: none;
+    }
+
+    #site-nav-list li {
+        background-color: #ebebeb;
+        font-size: 1.5rem;
+    }
+
+    #site-nav-list a {
+        padding: .5rem;
+        margin: .5rem;
+    }
+
+    .site-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .site-logo-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    
+}
+
+
+/* Main
+--------------------------------------------- */
+.site-header {
+    position: relative;
+}
+
+section h1 {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(.1rem);
+    text-align: center;
+	color: #ffffff;
+}
+
+section video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.site-section {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.site-img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: 180;
+}
+
+.button {
+    border: solid;
+    width: fit-content;
+    margin: 0 auto 0;
+}
+
+.go-to-top-button {
+    width: 3rem;
+    height: auto;
+    position: sticky;
+    z-index: 1000;
+    bottom: 1rem;
+    
+}
+
+
+@media(min-width: 50em){
+    section h1 {
+        padding: 1rem;
+        font-size: 4rem;
+        top: 50%;
+        left: 47%;
+    }
+
+    section video {
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+    }
+
+    .site-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto;
+		gap: .5rem;
+		justify-content: center;
+		align-content: center;
+    }
+
+    .site-grid article:first-of-type{
+        grid-column: 2/3;
+    }
+    
+    .site-section{
+        margin-bottom: 4rem;
+    }
+
+    /* .go-to-top-button {
+       bottom: 1rem;
+    } */
+}
+
+/* Footer
+--------------------------------------------- */
+footer {
+    background-color: rgb(26, 26, 26);
+    color: rgb(227, 227, 227);
+    position: sticky;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 1 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+footer li {
+    padding: .5rem;
+}
+
+footer svg path{
+    fill: #ffffff;
+}
+
+footer svg {
+    padding: .5rem;
+}
+
+.footer-icon {
+    text-align: center;
+    margin: 0;
+}
+
+footer p,
+footer h3 {
+    text-align: center;
+    margin: .5rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
+
+
+/* History */
+/* main */

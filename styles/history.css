@@ -1,0 +1,290 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	
+}
+
+p {
+	
+}
+
+
+/* Elements
+--------------------------------------------- */
+ul {
+	
+}
+
+ol {
+	
+}
+
+dl {
+	
+}
+
+figure {
+	
+}
+
+table {
+	
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	text-decoration: none;
+    color: #f0f0f0;
+    padding: .5rem;
+}
+
+#site-nav-list a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	
+}
+
+a:hover {
+	
+}
+
+a:focus {
+	
+}
+
+a:active {
+	
+}
+
+a:hover .site-logo path,
+a:focus .site-logo path {
+    fill: #191919; 
+}
+
+.footer-link {
+    padding: .5rem;
+    color: rgb(210, 210, 210);
+}
+
+footer a:active,
+footer a:hover{
+    color: rgb(24, 24, 24);
+    background-color: #ffffff;
+    list-style-type: none;
+}
+
+@media(min-width:50em) {
+    a {
+        padding: 0;
+        margin: 0;
+        color: black;
+    }
+}
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+header {
+    padding: .5rem;
+    border-bottom: solid;
+}
+
+.site-logo-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.site-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+.site-nav ul{
+    list-style-type: none;
+    margin-top: 3rem;
+    margin-left: .4rem;
+    padding: 0;
+
+}
+.site-nav li {
+    background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(.1rem);
+    padding-top: .4rem;
+    
+}
+
+#site-nav-button {
+    display: block;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#site-nav-list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+    
+    
+}
+
+#site-nav-list.toggled {
+    display: flex;
+    
+}
+
+
+
+
+
+@media (min-width: 50em) {
+    .site-logo {
+        width: 5rem;
+        height: auto;
+    }
+
+    #site-nav-button {
+        display: none;
+    }
+    .site-logo-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #site-nav-list {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        z-index: auto;
+        transition: none;
+    }
+
+    #site-nav-list li {
+        background-color: #ffffff;
+        font-size: 1.5rem;
+    }
+
+    #site-nav-list a {
+        padding: .5rem;
+        margin: .5rem;
+    }
+
+    .site-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .site-logo-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    
+}
+
+
+/* Main
+--------------------------------------------- */
+
+
+/* Footer
+--------------------------------------------- */
+footer {
+    background-color: rgb(26, 26, 26);
+    color: rgb(227, 227, 227);
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 1 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+footer li {
+    padding: .5rem;
+}
+
+footer svg path{
+    fill: #ffffff;
+}
+
+footer svg {
+    padding: .5rem;
+}
+
+.footer-icon {
+    text-align: center;
+    margin: 0;
+}
+
+footer p,
+footer h3 {
+    text-align: center;
+    margin: .5rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
