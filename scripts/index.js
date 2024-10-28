@@ -6,27 +6,4 @@ navButton.addEventListener('click', () => {
 });
 
 
-const container = document.querySelector('.container');
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
 
-let currentIndex = 0;
-
-document.getElementById('next').addEventListener('click', () => {
-    if (currentIndex < totalSlides - 1) {
-        currentIndex++;
-        updateSlidePosition();
-    }
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlidePosition();
-    }
-});
-
-function updateSlidePosition() {
-    const offset = -currentIndex * 100; 
-    container.style.transform = `translateX(${offset}vw)`;
-}

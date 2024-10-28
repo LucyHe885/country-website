@@ -1,26 +1,60 @@
-body {
-    overflow-x: hidden;
-    margin: 0;
+p a{
+    color: rgb(146, 114, 55);
 }
+
+article {
+    background-color: #eeeeee; 
+    margin-bottom: 2rem;  
+    border-radius: .35rem; 
+    box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, 0.1);  
+    margin: 5rem auto;
+}   
+
+img {
+    width: 50rem;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: .35rem; 
+}
+
+@media(min-width:50em){
+
+p {
+    width: 50rem;
+    height: auto;
+}
+
 
 .container {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 300vw; /* 如果有三个 section */
+    margin: 10rem 0;
+    display: flex;            
+    overflow-x: auto;        
+    scroll-snap-type: x mandatory;
+    width: 97vw;       
 }
+
 
 .slide {
-    min-width: 100vw;
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: white;
-    background: #333;
+    justify-content: space-between;
+    flex: 0 0 60rem;
+    scroll-snap-align: center; 
+    box-sizing: border-box;
+    padding: 1.5rem;
+    margin: 5rem;
 }
 
-/* 可以为每个 section 设置不同的背景色 */
-#slide1 { background-color: #FF5733; }
-#slide2 { background-color: #33A1FF; }
-#slide3 { background-color: #33FF57; }
+.container::-webkit-scrollbar {
+    height: .5rem;              
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: .25rem;
+}
+
+
+
+
+}

@@ -358,14 +358,10 @@ footer ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0;
+    padding: 1rem;
     margin: 0 1 0;
     list-style-type: none;
     text-align: center;
-}
-
-footer li {
-    padding: .5rem;
 }
 
 footer svg path{
