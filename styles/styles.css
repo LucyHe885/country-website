@@ -57,7 +57,7 @@ a {
 }
 
 p a{
-    color: rgb(146, 114, 55);
+    color: rgb(142, 92, 0);
 }
 
 p a:hover {
@@ -183,6 +183,15 @@ header {
     display: block;
     cursor: pointer;
     margin-right: 1rem;
+}
+
+#site-nav-button path {
+    fill: #6e5939;
+}
+#site-nav-button path:hover,
+#site-nav-button path:focus,
+#site-nav-button path:active{
+    fill: #454039;
 }
 
 #site-nav-list {
@@ -312,6 +321,7 @@ section h1 {
     height: 20rem;
 }
 
+video,
 img {
     border-radius: .35rem; 
     object-fit: cover;
