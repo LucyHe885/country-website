@@ -282,6 +282,9 @@ header {
 
 /* Main
 --------------------------------------------- */
+main {
+    padding: 1rem;
+}
 .site-header {
     position: relative;
 }
@@ -306,6 +309,7 @@ section h1 {
 
 }
 
+.contact-form,
 .site-section {
     margin: 7rem 0;
     padding: 1rem;
@@ -365,8 +369,37 @@ img {
     fill: #bd9a66; 
 }
 
+.contact-form h2 {
+    color: #775522;
+}
+
+.contact-form {
+    text-align: center;
+    margin-bottom: 5rem;
+    min-width: 18rem;
+    max-width: 30rem;
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+    min-width: 6rem;
+}
+
+.contact-form-button {
+   margin-left: .5em;
+   border-radius: 1rem;
+}
+
+
 
 @media(min-width: 50em){
+    .contact-form {
+        margin: 0 36rem;
+        padding: 1rem;
+    }
+
+
     section h1 {
         padding: 1rem;
         font-size: 4rem;
