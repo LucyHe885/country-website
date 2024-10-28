@@ -285,6 +285,30 @@ header {
 main {
     padding: 1rem;
 }
+
+.screen-reader-text {
+    border: 0;
+    clip:rect(1, 1, 1, 1);
+    clip-path: inset(50%);
+    height: .1125rem;
+    margin: -0.1125rem;
+    overflow: hidden;
+    padding: 0;
+    word-wrap: normal;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto;
+    clip-path: none;
+    color: #444;
+    display: block;
+    left: .3rem;
+    padding: 1rem;
+    top: .3rem;
+    z-index: 100000;
+}
+
 .site-header {
     position: relative;
 }
@@ -369,6 +393,7 @@ img {
     fill: #bd9a66; 
 }
 
+
 .contact-form h2 {
     color: #775522;
 }
@@ -394,11 +419,10 @@ label {
 
 
 @media(min-width: 50em){
-    .contact-form {
-        margin: 0 36rem;
-        padding: 1rem;
-    }
 
+    .contact-form{
+        margin: 0 auto;
+    }
 
     section h1 {
         padding: 1rem;

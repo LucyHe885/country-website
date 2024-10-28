@@ -6,4 +6,10 @@ navButton.addEventListener('click', () => {
 });
 
 
-
+document.getElementById('contact-form').addEventListener('send-your-message', (event)=> {
+const contactForm = event.target
+if(!validateContactForm(contactForm)) {
+    event.preventDefault()
+    displayError(contactForm,'Invalid input')
+}
+})
